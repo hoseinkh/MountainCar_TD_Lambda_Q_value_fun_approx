@@ -30,7 +30,7 @@ In fact, the eligibility traces can be deﬁned in multiple ways and hence TD(λ
   <img src="/figs/Formulation_TD_lambda_Q_value_fun_approx.png" width="450" />
 </p>
 
-Where $\delta$ is the error of the function approximator, $V_{\theta}$ is the value function approximator with $\theta$ as its parameters. $\lambda$ is the discount rate, and $\alpha$ is the learning rate. $X$ is the feature representaion of (a) state. $z$ is the elibility traces.
+Where $\delta$ is the error of the function approximator, $`V_{\theta}`$ is the value function approximator with $\theta$ as its parameters. $\lambda$ is the discount rate, and $\alpha$ is the learning rate. $X$ is the feature representaion of (a) state. $`z`$ is the elibility traces.
 
 
 
