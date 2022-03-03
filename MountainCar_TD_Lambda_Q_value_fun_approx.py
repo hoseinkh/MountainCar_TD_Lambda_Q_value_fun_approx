@@ -14,9 +14,7 @@ from sklearn.pipeline import FeatureUnion
 from sklearn.preprocessing import StandardScaler
 from sklearn.kernel_approximation import RBFSampler
 from tqdm import tqdm
-from sklearn.linear_model import SGDRegressor
-# code we already wrote
-# import q_learning
+# from sklearn.linear_model import SGDRegressor
 ###############################################################################
 class SGDRegressor_modified:
   # we implement and modify the SGD regressor!
@@ -153,7 +151,7 @@ def plot_running_avg(totalrewards):
   N = len(totalrewards)
   running_avg = np.empty(N)
   for t in range(N):
-    running_avg[t] = totalrewards[max(0, t-100):(t+1)].mean()
+    running_avg[t] = totalrewards[max(0, t-10):(t+1)].mean()
   plt.plot(running_avg)
   plt.ylabel("Running Average Total Reward")
   plt.xlabel("Episode")
@@ -182,7 +180,7 @@ def plot_avg_num_remaining_steps(env, estimator, num_tiles=20):
   ax.set_zlabel('Num steps to reach mountain == -V(s)')
   ax.set_title("Num steps to Reach Mountain Function")
   fig.colorbar(surf)
-  fig.savefig("./figs/Num_steps_to_Reach_Mountain.png")
+  # fig.savefig("./figs/Num_steps_to_Reach_Mountain.png")
   # plt.show()
   plt.close()
 ###############################################################################
@@ -193,7 +191,7 @@ if __name__ == '__main__':
   discount_rate = 0.9999
   lambda_ = 0.7
   #
-  if True:
+  if False:
     monitor_dir = os.getcwd() + "/videos/" + str(datetime.now())
     env = wrappers.Monitor(env, monitor_dir)
   #
@@ -214,7 +212,7 @@ if __name__ == '__main__':
   #
   plt.plot(totalrewards)
   plt.title("Rewards")
-  plt.savefig("./figs/Average_Total_Reward.png")
+  # plt.savefig("./figs/Average_Total_Reward.png")
   plt.show()
   plt.close()
   #
