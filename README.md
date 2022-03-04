@@ -82,3 +82,8 @@ And the average # steps to reach to the top of the mountain at different state-a
 
 
 
+------
+
+### References
+
+1. [Algorithms for Reinforcement Learning; Csaba Szepesvári](https://sites.ualberta.ca/~szepesva/rlbook.html); page 22.
